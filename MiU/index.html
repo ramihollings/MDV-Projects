@@ -1,0 +1,119 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Electronic Database</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+<!-- First Home Page -->
+	<div data-role="page" id="home">
+		
+		<div data-role="header" data-position="fixed"data-inset="true">
+			<h1>ELECTRONIC DataBASE</h1>
+		</div>
+		<div>
+			<li><a href="additem.html"data-icon="grid"class="ui-btn-right" data-iconpos="notext">
+			<img src="images/CTA.png" />
+			</a></li>
+		</div>
+		<div>
+    		<input type="search" name="lookup" id="search" value=""/>Search
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" >
+				<li>BROWSE INSIDE YOUR DataBASE</li>
+				<li><a href="#underconstruct">
+					<img src="images/Own.png"/>
+					<h3>Own</h3>
+					<p>You own or use on the daily.</p>
+				</a></li>
+				<li><a href="#underconstruct">
+					<img src="images/Owned.png"/>
+					<h3>Owned</h3>
+					<p>You have owned in the past.</p>
+				</a></li>
+				<li><a href="#underconstruct">
+					<img src="images/Want.png"/>
+					<h3>Want</h3>
+					<p>Just cant live without.</p>
+				</a></li>
+			</ul>
+		</div>
+		
+<!--	<div data-role="footer">
+			<div data-role="navbar">
+				
+				<ul>
+					<li><a href="#Owned" data-icon="info">Owned</a></li>
+					<li><a href="#Own" data-icon="info">Own</a></li>
+					<li><a href="#Want" data-icon="info">Want</a></li>				
+				</ul>  
+			
+			</div>
+		</div> -->
+		
+	</div>	
+	
+<!-- Second Page 		
+	<div data-role="page" id="formPage" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Page 2</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>Inside your DataBASE</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Inside your DataBASE</h4>
+		</div>
+		
+	</div>
+ UnderConstruction Page 	
+	<div data-role="page" id="underconstruct" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Inside your DataBASE</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>This page is under construction and will be added soon.</p>
+		</div>
+				<li><a href="#home">
+					<img src="images/uc.jpg"/>
+				</a></ul>
+		<div data-role="footer" data-position="fixed">
+			<h4>Inside your DataBASE</h4>
+		</div>
+		
+	</div> -->
+
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</body>
+</html>
