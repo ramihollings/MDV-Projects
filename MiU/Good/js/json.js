@@ -1,5 +1,5 @@
 // DOCTYPE html
-// Project: Web App Part 4
+// Project: 2
 // Rami Hollingsworth
 // Term 0112
 
@@ -33,8 +33,8 @@ var json = {
 	"item4": {
 		"group": ["Group:", "Owned"],
 		"name": ["Name of Electronic:", "iPhone"],
-		"purchased": ["Purchase Date", "2005-01-11"],
-		"rating": ["Rating", "3"],
+		"purchased": ["Purchase Date", "2007-01-11"],
+		"rating": ["Rating", "2"],
 		"toe": ["Type of Electronic", "Phone"], 
 		"notes": ["Notes", "Glorified MP3 player"]
 	},
@@ -72,7 +72,7 @@ var json = {
 	},
 	"item9": {
 		"group": ["Group:", "Want"],
-		"name": ["Name of Electronic:", "Nokia 910"],
+		"name": ["Name of Electronic:", "Nokia N910"],
 		"purchased": ["Purchase Date", "2012-12-25"],
 		"rating": ["Rating", "3"],
 		"toe": ["Type of Electronic", "Phone"], 
@@ -153,7 +153,7 @@ var json = {
 	"item19": {
 		"group": ["Group:", "Owned"],
 		"name": ["Name of Electronic:", "iPod Nano 5GEN"],
-		"purchased": ["Purchase Date", "20011-01-13"],
+		"purchased": ["Purchase Date", "2011-01-13"],
 		"rating": ["Rating", "4"],
 		"toe": ["Type of Electronic", "Other"], 
 		"notes": ["Notes", "First Smart watch"]

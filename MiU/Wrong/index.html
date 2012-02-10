@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--Project: 2-->
+<!--Rami Hollingsworth-->
+<!--Term 0112-->
+
+
+
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Electronic Database</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	
+<!-- Second Home Bad -->
+	<div data-role="page" id="badHome">
+		<div data-role="header" data-position="fixed"data-inset="true">
+			<h1>ELECTRONIC DataBASE</h1>
+		</div>
+		<div>
+			<li><a rel="external"href="additem.html"data-icon="grid"class="ui-btn-right" data-iconpos="notext">
+			<img src="images/CTA.png" />
+			</a></li>
+		</div>
+		<div>
+    		<input type="search" name="lookup" id="search" value=""/>Search
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+			<li>BROWSE INSIDE YOUR DataBASE</li>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3><img src="images/Own.png"/>Own</h3>
+					<ul data-role="listview" data-theme="c">
+						<li><a href="#iPad2">iPad2</a></li>
+						<li><a href="#Flyer">HTC Flyer</a></li>
+						<li><a href="#Sensation">HTC Sensation 4G</a></li>
+						<li><a href="#MAC">Macbook Pro</a></li>
+						<li><a href="#ACTV">Motorola ACTV</a></li>
+						<li><a href="#SGS2">Samsung Galaxy S2</a></li>
+						<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3><img src="images/Owned.png"/>Owned</h3>
+					<ul data-role="listview" data-theme="c">
+						<li><a href="#iPad2">iPad2</a></li>
+						<li><a href="#Flyer">HTC Flyer</a></li>
+						<li><a href="#Sensation">HTC Sensation 4G</a></li>
+						<li><a href="#MAC">Macbook Pro</a></li>
+						<li><a href="#ACTV">Motorola ACTV</a></li>
+						<li><a href="#SGS2">Samsung Galaxy S2</a></li>
+						<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3><img src="images/Want.png"/>Want</h3>
+					<ul data-role="listview" data-theme="c">
+						<li><a href="#Nokia">Nokia 910</a></li>
+						<li><a href="#PadPhone">PadPhone</a></li>
+						<li><a href="#Note">Samsung Galaxy Note</a></li>
+					</ul>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>All</h3>
+					<ul data-role="listview" data-theme="c">
+						<li><a href="#Evo">Evo 4G</a></li>
+						<li><a href="#Flyer">HTC Flyer</a></li>
+						<li><a href="#Sensation">HTC Sensation 4G</a></li>
+						<li><a href="#iPad2">iPad2</a></li>
+						<li><a href="#iPhone">iPhone</a></li>
+						<li><a href="#iPhone4">iPhone 4</a></li>
+						<li><a href="#nano">iPod Nano 5GEN</a></li>
+						<li><a href="#iPod3">iPod Touch Gen3</a></li>
+						<li><a href="#LG">LG 2974</a></li>
+						<li><a href="#Atrix">Motorola Atrix</a></li>
+						<li><a href="#ACTV">Motorola ACTV</a></li>
+						<li><a href="#MAC">Macbook Pro</a></li>
+						<li><a href="#Nook">Nook Color</a></li>
+						<li><a href="#Nokia">Nokia 910</a></li>
+						<li><a href="#PadPhone">PadPhone</a></li>
+						<li><a href="#SGS2">Samsung Galaxy S2</a></li>
+						<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
+						<li><a href="#Note">Samsung Galaxy Note</a></li>
+						<li><a href="#SGS1">Samsung Galaxy S1</a></li>
+						<li><a href="#Tab">Samsung Galaxy Tab</a></li>
+						<li><a href="#Xperia">Sony Xperia</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- AllItems  -->
+	<div data-role="page" id="AllItems">
+		<div data-role="header" data-position="fixed"data-inset="true">
+			<h1>All Items</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-theme="c" data-filter="true">
+				<li><a href="#Evo">Evo 4G</a></li>
+				<li><a href="#Flyer">HTC Flyer</a></li>
+				<li><a href="#Sensation">HTC Sensation 4G</a></li>
+				<li><a href="#iPad2">iPad2</a></li>
+				<li><a href="#iPhone">iPhone</a></li>
+				<li><a href="#iPhone4">iPhone 4</a></li>
+				<li><a href="#nano">iPod Nano 5GEN</a></li>
+				<li><a href="#iPod3">iPod Touch Gen3</a></li>
+				<li><a href="#LG">LG 2974</a></li>
+				<li><a href="#Atrix">Motorola Atrix</a></li>
+				<li><a href="#ACTV">Motorola ACTV</a></li>
+				<li><a href="#MAC">Macbook Pro</a></li>
+				<li><a href="#Nook">Nook Color</a></li>
+				<li><a href="#Nokia">Nokia 910</a></li>
+				<li><a href="#PadPhone">PadPhone</a></li>
+				<li><a href="#SGS2">Samsung Galaxy S2</a></li>
+				<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
+				<li><a href="#Note">Samsung Galaxy Note</a></li>
+				<li><a href="#SGS1">Samsung Galaxy S1</a></li>
+				<li><a href="#Tab">Samsung Galaxy Tab</a></li>
+				<li><a href="#Xperia">Sony Xperia</a></li>
+			</ul>
+		</div>
+	</div>
+
+<!-- OwnItems  -->
+	<div data-role="page" id="OwnItems">
+		<div data-role="header" data-position="fixed"data-inset="true">
+			<h1>Items Now Owned</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-theme="c" data-filter="true">
+				<li><a href="#iPad2">iPad2</a></li>
+				<li><a href="#Flyer">HTC Flyer</a></li>
+				<li><a href="#Sensation">HTC Sensation 4G</a></li>
+				<li><a href="#MAC">Macbook Pro</a></li>
+				<li><a href="#ACTV">Motorola ACTV</a></li>
+				<li><a href="#SGS2">Samsung Galaxy S2</a></li>
+				<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
+			</ul>
+		</div>
+	</div>
+<!-- OwnedItems  -->
+	<div data-role="page" id="OwnedItems">
+		<div data-role="header" data-position="fixed"data-inset="true">
+			<h1>Owned Items</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-theme="c" data-filter="true">
+				<li><a href="#Evo">Evo 4G</a></li>
+				<li><a href="#iPhone">iPhone</a></li>
+				<li><a href="#iPhone4">iPhone 4</a></li>
+				<li><a href="#nano">iPod Nano 5GEN</a></li>
+				<li><a href="#iPod3">iPod Touch Gen3</a></li>
+				<li><a href="#LG">LG 2974</a></li>
+				<li><a href="#Atrix">Motorola Atrix</a></li>
+				<li><a href="#Nook">Nook Color</a></li>
+				<li><a href="#SGS1">Samsung Galaxy S1</a></li>
+				<li><a href="#Tab">Samsung Galaxy Tab</a></li>
+				<li><a href="#Xperia">Sony Xperia</a></li>
+			</ul>
+		</div>
+	</div>
+<!-- WantItems  -->
+	<div data-role="page" id="WantItems">
+		<div data-role="header" data-position="fixed"data-inset="true">
+			<h1>Wanted Items</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-theme="c" data-filter="true">
+				<li><a href="#Nokia">Nokia 910</a></li>
+				<li><a href="#PadPhone">PadPhone</a></li>
+				<li><a href="#Note">Samsung Galaxy Note</a></li>
+			</ul>
+		</div>
+	</div>
+<!-- 1st dynamic page 
+	<div id="list" data-role="page">
+  		<div data-role="header"><h1>Categories</h1></div>
+  		<div data-role="content">
+  			<h2>Select a Category Below:</h2>
+  				<ul data-role="listview" data-inset="true">
+    				<li><a href="#category-items?category=animals">Own</a></li>
+    				<li><a href="#category-items?category=colors">Owned</a></li>
+    				<li><a href="#category-items?category=vehicles">Want</a></li>
+    			</ul>
+ 		</div>
+	</div>
+
+<!-- Second Page 		
+	<div data-role="page" id="formPage" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Page 2</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>Inside your DataBASE</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Inside your DataBASE</h4>
+		</div>
+		
+	</div> -->
+ <!--UnderConstruction Page 	
+	<div data-role="page" id="underconstruct" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Inside your DataBASE</h1>
+		</div>
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-collapsed="false">
+			<h3>Section 1</h3>
+			<p>I'm the collapsible set content for section B.</p>
+		</div>
+		<div data-role="collapsible">
+			<h3>Section 2</h3>
+			<p>I'm the collapsible set content for section B.</p>
+		</div>
+	
+		</div>
+		<div data-role="content">
+			<p>This page is under construction and will be added soon.</p>
+		</div>
+				<li><a href="#home">
+					<img src="images/uc.jpg"/>
+				</a></ul>
+		<div data-role="footer" data-position="fixed">
+			<h4>Inside your DataBASE</h4>
+		</div>
+		
+	</div>-->
+
+<!-- SGS2 Page -->
+	<div data-role="page" id="SGS2">
+		<p>Group: Own<br />
+		Name: Samsung Galaxy S2<br />
+		Purchase Date: 2011-09-10<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: Bad Reception</p>
+	</div>
+<!-- GNEX Page -->
+	<div data-role="page" id="GNEX">
+		<p>Group: Own<br />
+		Name: Samsung Galaxy Nexus<br />
+		Purchase Date: 2011-02-10<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: Perfect phone even on Verizon.</p>
+	</div>
+<!-- iPad2 Page -->
+	<div data-role="page" id="iPad2">
+		<p>Group: Own<br />
+		Name: iPad2<br />
+		Purchase Date: 2011-08-24<br />
+		Rating: 5<br />
+		Type of Electronic: Other<br />
+		Notes: Best tablet so far.</p>
+	</div>		
+<!-- Flyer Page -->
+	<div data-role="page" id="Flyer">
+		<p>Group: Own<br />
+		Name: HTC Flyer<br />
+		Purchase Date: 2011-12-20<br />
+		Rating: 4<br />
+		Type of Electronic: Other<br />
+		Notes: Slow but has digital pen.</p>
+	</div>
+<!-- ACTV Page -->
+	<div data-role="page" id="ACTV">
+		<p>Group: Own<br />
+		Name: Motorola ACTV<br />
+		Purchase Date: 2011-11-26<br />
+		Rating: 5<br />
+		Type of Electronic: Other<br />
+		Notes: BLACK FRIDAYÉ Best smart watch and sport watch.Hack to run full Android 2.3.</p>
+	</div>
+<!-- MAC Page -->
+	<div data-role="page" id="MAC">
+		<p>Group: Own<br />
+		Name: Macbook Pro<br />
+		Purchase Date: 2011-06-10<br />
+		Rating: 5<br />
+		Type of Electronic: Other<br />
+		Notes: I will never go back to PCs.</p>
+	</div>		
+<!-- SGS1 Page -->
+	<div data-role="page" id="SGS1">
+		<p>Group: Owned<br />
+		Name: Samsung Galaxy S1<br />
+		Purchase Date: 2011-02-10<br />
+		Rating: 3<br />
+		Type of Electronic: Phone<br />
+		Notes: Small Screen.</p>
+	</div>
+<!-- iPhone Page -->
+	<div data-role="page" id="iPhone">
+		<p>Group: Owned<br />
+		Name: Apple iPhone<br />
+		Purchase Date: 2007-01-11<br />
+		Rating: 2<br />
+		Type of Electronic: Phone<br />
+		Notes: Glorified MP3 player.</p>
+	</div>
+<!-- iPod3 Page -->
+	<div data-role="page" id="iPod3">
+		<p>Group: Owned<br />
+		Name: iPod Touch Gen3<br />
+		Purchase Date: 2010-02-16<br />
+		Rating: 4<br />
+		Type of Electronic: Other<br />
+		Notes: Best MP3 Player of all time.</p>
+	</div>		
+<!-- iPhone4 Page -->
+	<div data-role="page" id="iPhone4">
+		<p>Group: Owned<br />
+		Name: iPhone 4<br />
+		Purchase Date: 2010-09-17<br />
+		Rating: 4<br />
+		Type of Electronic: Phone<br />
+		Notes:Great phone but you dont need it if you have an iPad.</p>
+	</div>
+<!-- Evo Page -->
+	<div data-role="page" id="Evo">
+		<p>Group: Owned<br />
+		Name: HTC Evo 4G<br />
+		Purchase Date: 2009-05-10<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: First 4g Phone.</p>
+	</div>
+<!-- Tab Page -->
+	<div data-role="page" id="Tab">
+		<p>Group: Owned<br />
+		Name: Samsung Galaxy Tab<br />
+		Purchase Date: 2011-09-10<br />
+		Rating: 4<br />
+		Type of Electronic: Other<br />
+		Notes: Very Slow.</p>
+	</div>		
+<!-- Atrix Page -->
+	<div data-role="page" id="Atrix">
+		<p>Group: Owned<br />
+		Name: Motorola Atrix<br />
+		Purchase Date: 2010-12-20<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: Super Phone. Screen to small.</p>
+	</div>
+<!-- Sensation Page -->
+	<div data-role="page" id="Sensation">
+		<p>Group: Own<br />
+		Name: HTC Sensation 4g<br />
+		Purchase Date: 2011-02-10<br />
+		Rating: 4<br />
+		Type of Electronic: Phone<br />
+		Notes: Wife's Phone.</p>
+	</div>
+<!-- Sony Xperia Page -->
+	<div data-role="page" id="Xperia">
+		<p>Group: Owned<br />
+		Name: Sony Xperia<br />
+		Purchase Date: 2008-12-25<br />
+		Rating: 1<br />
+		Type of Electronic: Phone<br />
+		Notes: Sony makes horrible phones.</p>
+	</div>		
+<!-- nano Page -->
+	<div data-role="page" id="nano">
+		<p>Group: Owned<br />
+		Name: iPod Nano 5GEN<br />
+		Purchase Date: 2011-02-10<br />
+		Rating: 5<br />
+		Type of Electronic: Other<br />
+		Notes: First Smart Watch.</p>
+	</div>
+<!-- LG Page -->
+	<div data-role="page" id="LG">
+		<p>Group: Owned<br />
+		Name: LG 2974<br />
+		Purchase Date: 2006-09-10<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: Korean phone with Video Talk. Last phone in Korea.</p>
+	</div>
+<!-- Nook Page -->
+	<div data-role="page" id="Nook">
+		<p>Group: Owned<br />
+		Name: Nook Color<br />
+		Purchase Date: 2011-01-13<br />
+		Rating: 5<br />
+		Type of Electronic: Other<br />
+		Notes: Poor quality Tablet.</p>
+	</div>		
+<!-- PadPhone Page -->
+	<div data-role="page" id="PadPhone">
+		<p>Group: Want<br />
+		Name: PadPhone<br />
+		Purchase Date: 2012-09-17<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: Phone and Tablet all in one.</p>
+	</div>
+<!-- Note Page -->
+	<div data-role="page" id="Note">
+		<p>Group: Want<br />
+		Name: Samsung Galaxy Note<br />
+		Purchase Date: 2012-05-10<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: Large Screen.</p>
+	</div>
+<!-- Nokia Page -->
+	<div data-role="page" id="Nokia">
+		<p>Group: Want<br />
+		Name: Nokia N910<br />
+		Purchase Date: 2012-12-25<br />
+		Rating: 5<br />
+		Type of Electronic: Phone<br />
+		Notes: Windows Phone.</p>
+	</div>		
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
