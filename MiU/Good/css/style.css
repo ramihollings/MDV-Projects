@@ -1,13 +1,72 @@
 /*
 CSS Style Sheet
-Project: 2
+Project: 3
 Rami Hollingsworth
 Term 0112
 */
 
+label.error{
+	color: red;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-top: 0.5em;
+    width: 100%;
+    float: none;
+
+}
+
+em { 
+	color: red; 
+	font-weight: bold; 
+	padding-right: .25em; 
+	
+}
+
+header{
+	font: Arial;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 h1 {
-	/*border-style: groove;*/
+	border-style: groove;
 	margin: 1%;
 	background-color: 5F5E62;
 	color: white;
@@ -63,10 +122,10 @@ a {
 }
 p {
 	padding: 14px;
-	/*color: white;*/
+	color: white;
 	font-size: 15px;
-	/*text-shadow: 1px 1px 2px black;*/
+	text-shadow: 1px 1px 2px black;
 	font-family: "Century Gothic";
 }
-
+ */
 

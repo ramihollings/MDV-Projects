@@ -1,10 +1,68 @@
-// DOCTYPE html
-// Project: 2
+// Project: 3
 // Rami Hollingsworth
 // Term 0112
+var parseTheForm = function(data){
 
-// Wait until the DOM is ready.
-window.addEventListener("DOMContentLoaded", function(){
+};
+$(document).ready(function(){
+
+	var rbform = $("#dataEntry");
+	
+	rbform.validate({
+		invalidHandler: function(form, validator){},
+		submitHandler:function(){
+			var data = rbform.serializeArray();
+			parseTheForm(data);
+		}
+	});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*window.addEventListener("DOMContentLoaded", function(){
 
 	//getElementById Function
 	function $(x){
@@ -260,4 +318,4 @@ window.addEventListener("DOMContentLoaded", function(){
 	clearLink.addEventListener("click", clearLocal);
 	var save = $("submit");
 	save.addEventListener("click", storeData);
-});
+});*/

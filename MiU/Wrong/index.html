@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--Project: 2-->
 <!--Rami Hollingsworth-->
 <!--Term 0112-->
@@ -22,6 +21,7 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="themes/Blackblue.min.css" />	
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	
@@ -31,91 +31,112 @@
 
 </head>
 <body>
-	
-<!-- Second Home Bad -->
-	<div data-role="page" id="badHome">
+
+<!-- First Home Page -->
+	<div data-role="page" id="home" data-theme="a">
 		<div data-role="header" data-position="fixed"data-inset="true">
 			<h1>ELECTRONIC DataBASE</h1>
 		</div>
 		<div>
-			<li><a rel="external"href="additem.html"data-icon="grid"class="ui-btn-right" data-iconpos="notext">
+			<li><a rel="external" href="#formPage"data-icon="grid"class="ui-btn-right" data-iconpos="notext">
 			<img src="images/CTA.png" />
 			</a></li>
 		</div>
-		<div>
-    		<input type="search" name="lookup" id="search" value=""/>Search
-		</div>
-		<div data-role="content">
-			<div data-role="collapsible-set">
-			<li>BROWSE INSIDE YOUR DataBASE</li>
-				<div data-role="collapsible" data-collapsed="true">
-					<h3><img src="images/Own.png"/>Own</h3>
-					<ul data-role="listview" data-theme="c">
-						<li><a href="#iPad2">iPad2</a></li>
-						<li><a href="#Flyer">HTC Flyer</a></li>
-						<li><a href="#Sensation">HTC Sensation 4G</a></li>
-						<li><a href="#MAC">Macbook Pro</a></li>
-						<li><a href="#ACTV">Motorola ACTV</a></li>
-						<li><a href="#SGS2">Samsung Galaxy S2</a></li>
-						<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
-					</ul>
-				</div>
-				<div data-role="collapsible" data-collapsed="true">
-					<h3><img src="images/Owned.png"/>Owned</h3>
-					<ul data-role="listview" data-theme="c">
-						<li><a href="#iPad2">iPad2</a></li>
-						<li><a href="#Flyer">HTC Flyer</a></li>
-						<li><a href="#Sensation">HTC Sensation 4G</a></li>
-						<li><a href="#MAC">Macbook Pro</a></li>
-						<li><a href="#ACTV">Motorola ACTV</a></li>
-						<li><a href="#SGS2">Samsung Galaxy S2</a></li>
-						<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
-					</ul>
-				</div>
-				<div data-role="collapsible" data-collapsed="true">
-					<h3><img src="images/Want.png"/>Want</h3>
-					<ul data-role="listview" data-theme="c">
-						<li><a href="#Nokia">Nokia 910</a></li>
-						<li><a href="#PadPhone">PadPhone</a></li>
-						<li><a href="#Note">Samsung Galaxy Note</a></li>
-					</ul>
-				</div>
-				<div data-role="collapsible" data-collapsed="true">
-					<h3>All</h3>
-					<ul data-role="listview" data-theme="c">
-						<li><a href="#Evo">Evo 4G</a></li>
-						<li><a href="#Flyer">HTC Flyer</a></li>
-						<li><a href="#Sensation">HTC Sensation 4G</a></li>
-						<li><a href="#iPad2">iPad2</a></li>
-						<li><a href="#iPhone">iPhone</a></li>
-						<li><a href="#iPhone4">iPhone 4</a></li>
-						<li><a href="#nano">iPod Nano 5GEN</a></li>
-						<li><a href="#iPod3">iPod Touch Gen3</a></li>
-						<li><a href="#LG">LG 2974</a></li>
-						<li><a href="#Atrix">Motorola Atrix</a></li>
-						<li><a href="#ACTV">Motorola ACTV</a></li>
-						<li><a href="#MAC">Macbook Pro</a></li>
-						<li><a href="#Nook">Nook Color</a></li>
-						<li><a href="#Nokia">Nokia 910</a></li>
-						<li><a href="#PadPhone">PadPhone</a></li>
-						<li><a href="#SGS2">Samsung Galaxy S2</a></li>
-						<li><a href="#GNEX">Samsung Galaxy Nexus</a></li>
-						<li><a href="#Note">Samsung Galaxy Note</a></li>
-						<li><a href="#SGS1">Samsung Galaxy S1</a></li>
-						<li><a href="#Tab">Samsung Galaxy Tab</a></li>
-						<li><a href="#Xperia">Sony Xperia</a></li>
-					</ul>
-				</div>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" >
+					<li>BROWSE INSIDE YOUR DataBASE</li>
+						<li><a href="#OwnItems">
+							<img src="images/Own.png"/>
+							<h3>Own</h3>
+							<p>You own or use on the daily.</p>
+						</a></li>
+					<li><a href="#OwnedItems">
+						<img src="images/Owned.png"/>
+						<h3>Owned</h3>
+						<p>You have owned in the past.</p>
+					</a></li>
+					<li><a href="#WantItems">
+						<img src="images/Want.png"/>
+						<h3>Want</h3>
+						<p>Just cant live without.</p>
+					</a></li>
+					<li><a href="#AllItems">
+						<h3>All</h3>
+						<p>Everything List</p>
+					</a></li>
+				</ul>
 			</div>
+	</div>	
+<!-- Form Page -->
+	<div data-role="page" data-theme="a" id= "formPage" data-add-back-btn="true">
+			<div data-role="header">
+				<h1>Add to Database</h1>
+			</div>				
+		<div data-role="content">
+		
+			<form action="" method="post" id="dataEntry">
+				<div data-role="fieldcontain">
+					<label for="groupItem"></label>
+					<select name="groupItem" id="groupItem" data-native-menu="true" />
+					<optgroup label="Group">
+						<option value="own">Own</option>
+						<option value="owned">Owned</option>				
+						<option value="want">Want</option>
+					</optgroup>
+					</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="nameItem"></label>
+					<input type="text" name="nameItem" id="nameItem" class="required" value= "Name of Electronic here..."/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="dateItem"></label>
+					<input type="text" value="02-17-2012" name="dateItem" id="dateItem"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="nameItem"></label>
+					<input type="range" name="rangeItem" id="rangeItem" value="5" min="1" max="5" />
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Type of Electronic:</legend>
+						<input type="radio" value="Phone" name="toe" id="phoneChoice"  />
+						<label for="phoneChoice">Phone</label>
+						<input type="radio" value="Computer" name="toe" id="computerChoice" />
+						<label for="computerChoice">Computer</label>
+						<input type="radio" checked value="Other" name="toe" id="otherChoice" />
+						<label for="otherChoice">Other</label>	
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain" data-theme="a">
+					<label for="favItem">Favorite:</label>
+					<select data-role="slider" name="favItem" id="favItem" />
+					<option value="on">Yes</option>
+					<option value="off">No</option>
+					</select>
+				</div>
+
+				<div data-role="fieldcontain" id="box">
+					<a>
+					<label for="notesItem">Notes:</label>
+					<input type="text"class="deletable"/>
+					</a>				
+				</div>
+				<div data-role="controlgroup" data-type="horizontal">
+					<input type="reset" data-iconpos="right" data-icon="delete" value="Cancel" data-theme="b"/>
+					<input type="submit" value="Add Item" data-icon="check" data-iconpos="right"data-theme="a"/>					
+				</div>
+			</form>
 		</div>
 	</div>
+
 <!-- AllItems  -->
 	<div data-role="page" id="AllItems">
 		<div data-role="header" data-position="fixed"data-inset="true">
 			<h1>All Items</h1>
 		</div>
 		<div data-role="content">
-			<ul data-role="listview" data-theme="c" data-filter="true">
+			<ul data-role="listview" data-theme="a" data-filter="true">
 				<li><a href="#Evo">Evo 4G</a></li>
 				<li><a href="#Flyer">HTC Flyer</a></li>
 				<li><a href="#Sensation">HTC Sensation 4G</a></li>
@@ -142,12 +163,12 @@
 	</div>
 
 <!-- OwnItems  -->
-	<div data-role="page" id="OwnItems">
+	<div data-role="page" id="OwnItems" >
 		<div data-role="header" data-position="fixed"data-inset="true">
 			<h1>Items Now Owned</h1>
 		</div>
 		<div data-role="content">
-			<ul data-role="listview" data-theme="c" data-filter="true">
+			<ul data-role="listview" data-theme="a" data-filter="true">
 				<li><a href="#iPad2">iPad2</a></li>
 				<li><a href="#Flyer">HTC Flyer</a></li>
 				<li><a href="#Sensation">HTC Sensation 4G</a></li>
@@ -159,12 +180,12 @@
 		</div>
 	</div>
 <!-- OwnedItems  -->
-	<div data-role="page" id="OwnedItems">
+	<div data-role="page" id="OwnedItems" >
 		<div data-role="header" data-position="fixed"data-inset="true">
 			<h1>Owned Items</h1>
 		</div>
 		<div data-role="content">
-			<ul data-role="listview" data-theme="c" data-filter="true">
+			<ul data-role="listview" data-theme="a" data-filter="true">
 				<li><a href="#Evo">Evo 4G</a></li>
 				<li><a href="#iPhone">iPhone</a></li>
 				<li><a href="#iPhone4">iPhone 4</a></li>
@@ -185,7 +206,7 @@
 			<h1>Wanted Items</h1>
 		</div>
 		<div data-role="content">
-			<ul data-role="listview" data-theme="c" data-filter="true">
+			<ul data-role="listview" data-theme="a" data-filter="true">
 				<li><a href="#Nokia">Nokia 910</a></li>
 				<li><a href="#PadPhone">PadPhone</a></li>
 				<li><a href="#Note">Samsung Galaxy Note</a></li>
@@ -205,7 +226,7 @@
  		</div>
 	</div>
 
-<!-- Second Page 		
+<!-- second Page 		
 	<div data-role="page" id="formPage" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
@@ -443,7 +464,34 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('input.deletable').wrap('<span class="deleteicon" />').after($('<span/>').click(function() {
+                    $(this).prev('input').val('').focus();
+                }));
+            });
+        </script>
+        <style>
+            span.deleteicon {
+                position: relative;
+            }
+            span.deleteicon span {
+                position: inside;
+                display: block;
+                top: 5px;
+                right: 0px;
+                width: 16px;
+                height: 16px;
+                background: url('http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=4') 0 -690px;
+                cursor: pointer;
+            }
+            span.deleteicon input {
+                padding-right: 16px;
+            }
+        </style>
 
 </body>
 </html>
