@@ -2,6 +2,7 @@
 // Rami Hollingsworth
 // Term 0112
 var parseTheForm = function(data){
+
 };
 $(document).ready(function(){
 
@@ -12,7 +13,6 @@ $(document).ready(function(){
 		submitHandler:function(){
 			var data = rbform.serializeArray();
 			parseTheForm(data);
-			alert("Please fill out required Form fields");
 		}
 	});
 
