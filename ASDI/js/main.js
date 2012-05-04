@@ -1,7 +1,7 @@
 // DOCTYPE html
 // Project: 1
 // Rami Hollingsworth
-// Term 1205
+// Term 1205 
 
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function(){
