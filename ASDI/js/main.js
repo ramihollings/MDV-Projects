@@ -1,13 +1,13 @@
 // DOCTYPE html
 // Project: 1
 // Rami Hollingsworth
-// Term 1205 
+// Term 1205
 
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function(){
 
 	//getElementById Function
-	function dollarSign(x){
+	function $(x){
 		var theElement = $("#id");
 		return theElement;
 	}
@@ -15,17 +15,17 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Create select field element and populate with options.
 	function makeCats(){
 		var formTag = $("form"),// formtag is an array of all the form tags.
-			selectLi = dollarSign("select"),
+			selectLi = $("#select"),
 			makeSelect = $.create("select");
 			makeSelect.setAttribute("id", "groups");
 		for(var i=0, j=contactGroups.length; i<j; i++){
 			var makeOption = $.create("option");
 			var optText = contactGroups[i];
 			makeOption.setAttribute("value", optText);
-			$(makeOption).HTML = optText;
-			makeSelect.appendChild(makeOption);
+			makeOption.HTML = optText;
+			makeSelect.append(makeOption);
 		}
-		selectLi.appendChild(makeSelect);
+		selectLi.append(makeSelect);
 	}
 	
 	//Find value of selected radio button.
@@ -41,18 +41,18 @@ window.addEventListener("DOMContentLoaded", function(){
 	function toggleControls(n){
 		switch(n){
 		case "on":
-			$("contactForm").style.display = "none";
-			dollarSign("clear").style.display = "inline";
-			dollarSign("displayLink").style.display = "none";
-			dollarSign("addNewItem").style.display = "inline";
+			$("#contactForm").style.display = "none";
+			$("#clear").style.display = "inline";
+			$("#displayLink").style.display = "none";
+			$("#addNewItem").style.display = "inline";
 
 			break;
 				case "off":
-			dollarSign("contactForm").style.display = "block";
-			dollarSign("clear").style.display = "inline";
-			dollarSign("displayLink").style.display = "inline";
-			dollarSign("addNewItem").style.display = "none";
-			dollarSign("items").style.display = "none";
+			$("#contactForm").style.display = "block";
+			$("#clear").style.display = "inline";
+			$("#displayLink").style.display = "inline";
+			$("#addNewItem").style.display = "none";
+			$("#items").style.display = "none";
 			break;
 				default:
 			return false;
@@ -69,12 +69,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Object proprties contain array with the form label
 		getSelectedRadio();
 		var item 			= {};
-			item.group		= ["Group:", dollarSign("groups").value];
-			item.name  		= ["Name:", dollarSign("name").value];
-			item.purchased	= ["Purchase Date:", dollarSign("purchased").value];
-			item.rating		= ["Rating:", dollarSign("rating").value];
+			item.group		= ["Group:", $("#groups").value];
+			item.name  		= ["Name:", $("#name").value];
+			item.purchased	= ["Purchase Date:", $("#purchased").value];
+			item.rating		= ["Rating:", $("#rating").value];
 			item.toe 		= ["Type of Electronic:", toeValue];
-			item.notes		= ["Notes:", dollarSign("notes").value];
+			item.notes		= ["Notes:", $("#notes").value];
 		//Save data into localstorage: using Stringify to convert object to string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Item Saved!");
@@ -90,26 +90,26 @@ window.addEventListener("DOMContentLoaded", function(){
 		var makeDiv = $.create("div");
 		makeDiv.setAttribute("id", "items");
 		var makeList = $.create("ul");
-		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
-		dollarSign("items").style.display = "display";
+		makeDiv.append(makeList);
+		document.body.append(makeDiv);
+		$("#items").style.display = "display";
 		for(var i=0, len=localStorage.length; i<len;i++){
 			var makeli 	= $.create("li");
 			var linksLi = $.create("li")
-			makeList.appendChild(makeli);
+			makeList.append(makeli);
 			var key 	= localStorage.key(i);
 			var value 	= localStorage.getItem(key);
 			//Convert the String from Local Storage value back to an object by using JSON
 			var obj 	= JSON.parse(value);
 			var makeSubList = $.create("ul");
-			makeli.appendChild(makeSubList);
+			makeli.append(makeSubList);
 			getImage(obj.group[1], makeSubList);
 			for(var n in obj){
 				var makeSubli = $.create("li");
-				makeSubList.appendChild(makeSubli);
+				makeSubList.append(makeSubli);
 				var optSubText = obj[n][0]+" "+obj[n][1];
-				$(makeSubli).HTML = optSubText;
-				makeSubList.appendChild(linksLi);
+				makeSubli.HTML = optSubText;
+				makeSubList.append(linksLi);
 			}	
 			makeItemLinks(localStorage.key(i), linksLi); //Create our edit and delete links for each item in local storage.
 		}
@@ -118,7 +118,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Get image for right catagory
 	function getImage(imeName, makeSubList){
 	 var imageLi = $.create("li")
-	 makeSubList.appendChild(imageLi);
+	 makeSubList.append(imageLi);
 	 var newImg = $.create("img");
 	 var setSrc = newImg.setAttribute("src", "images/"+ imeName + ".png");
 	}
@@ -141,17 +141,17 @@ window.addEventListener("DOMContentLoaded", function(){
 		editLink.href = "#";
 		editLink.key = key;
 		var editText = "Edit Item";
-		editLink.addEventListener("click", editItem);
-		$(editLink).HTML = editText;
-		linksLi.appendChild(editLink);
+		$(editLink).bind("click", editItem);
+		editLink.HTML = editText;
+		linksLi.append(editLink);
 	//add delete single item link
 		var deleteLink = $.create("a");
 		deleteLink.href = "#";
 		deleteLink.key = key;
 		var deleteText = "Delete Item";
-		deleteLink.addEventListener("click", deleteItem);
-		$(deleteLink).HTML = deleteText;
-		linksLi.appendChild(deleteLink);
+		$(deleteLink).bind("click", deleteItem);
+		$deleteLink.HTML = deleteText;
+		linksLi.append(deleteLink);
 	}
 
 		
@@ -164,10 +164,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("off");
 		
 		//populate the form fields with current localStorage values.
-		dollarSign("groups").value 	 = item.group[1];
-		dollarSign("name").value   	 = item.name[1];
-		dollarSign("purchased").value = item.purchased[1];
-		dollarSign("rating").value 	 = item.rating[1];
+		$("#groups").value 	 = item.group[1];
+		$("#name").value   	 = item.name[1];
+		$("#purchased").value = item.purchased[1];
+		$("#rating").value 	 = item.rating[1];
 		var radios = document.forms[0].toe;
 		for(var i=0; i<radios.length; i++){
 			if(radios[i].value == "Phone" && item.toe[1] == "Phone"){
@@ -177,12 +177,12 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 		
-		dollarSign("notes").value = item.notes[1];
+		$("#notes").value = item.notes[1];
 		
-		save.removeEventListener("click", storeData);
-		dollarSign("submit").value = "Edit Item";
-		var editSubmit = dollarSign("submit");
-		editSubmit.addEventListener("click", validate);
+		$(save).unbind("click", storeData);
+		$("#submit").value = "Edit Item";
+		var editSubmit = $("#submit");
+		$(editSubmit).bind("click", validate);
 		editSubmit.key = this.key;
 		
 		
@@ -210,33 +210,33 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	function validate(e){
-		var getGroup = dollarSign("groups");
-		var getName  = dollarSign("name");
+		var getGroup = $("#groups");
+		var getName  = $("#name");
 		
 		
 		
-			$(errMsg).HTML= "";
-			getGroup.style.border = "1px solid black";
-			getName.style.border = "1px solid black";
+			errMsg.HTML= "";
+			getGroup.attr = "1px solid black";
+			getName.attr = "1px solid black";
 		
 		var messageA = [];
 		if (getGroup.value === "---Do I own this Item---"){
 			var groupError = "Please pick a group.";
-			getGroup.style.border = "1px solid red";
+			getGroup.attr = "1px solid red";
 			messageA.push(groupError);
 		}
 		
 		if (getName.value === ""){
 			var nameError = "Please put in name for DataBase.";
-			getName.style.border = "1px solid red";
+			getName.attr = "1px solid red";
 			messageA.push(nameError);
 		}
 		
 		if (messageA.length >=1){
 			for(var i=0, j=messageA.length; i<j; i++){
 				var txt = $.create("li");
-				$(txt).HTML = messageA[i];
-				errMsg.appendChild(txt);
+				txt.HTML = messageA[i];
+				errMsg.append(txt);
 			}
 			e.preventDefault();
 			return false;
@@ -251,10 +251,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	makeCats();
 
 	//Set Links & Submit Click Events
-	var displayLink = dollarSign("displayLink");
-	displayLink.addEventListener("click", getData);
-	var clearLink = dollarSign("clear");
-	clearLink.addEventListener("click", clearLocal);
-	var save = dollarSign("submit");
-	save.addEventListener("click", storeData);
+	var displayLink = $("#displayLink");
+	$(displayLink).bind("click", getData);
+	var clearLink = $("#clear");
+	$(clearLink).bind("click", clearLocal);
+	var save = $("#submit");
+	$(save).bind("click", storeData);
 });
