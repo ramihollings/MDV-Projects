@@ -1,22 +1,22 @@
 // DOCTYPE html
-// Project: 2
+// Project: 1
 // Rami Hollingsworth
 // Term 1205
 
 // Wait until the DOM is ready.
-$(document).ready("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function(){
 
 	//getElementById Function
 	function $(x){
 		var theElement = $("#id");
 		return theElement;
-	} 
+	}
 	
 	//Create select field element and populate with options.
 	function makeCats(){
 		var formTag = $("form"),// formtag is an array of all the form tags.
 			selectLi = $("#select"),
-			makeSelect = $.creat("select");
+			makeSelect = $.create("select");
 			makeSelect.setAttribute("id", "groups");
 		for(var i=0, j=contactGroups.length; i<j; i++){
 			var makeOption = $.create("option");
@@ -142,7 +142,6 @@ $(document).ready("DOMContentLoaded", function(){
 		editLink.key = key;
 		var editText = "Edit Item";
 		$(editLink).bind("click", editItem);
-		return false;
 		editLink.HTML = editText;
 		linksLi.append(editLink);
 	//add delete single item link
@@ -151,7 +150,6 @@ $(document).ready("DOMContentLoaded", function(){
 		deleteLink.key = key;
 		var deleteText = "Delete Item";
 		$(deleteLink).bind("click", deleteItem);
-		return false;
 		$deleteLink.HTML = deleteText;
 		linksLi.append(deleteLink);
 	}
@@ -185,7 +183,6 @@ $(document).ready("DOMContentLoaded", function(){
 		$("#submit").value = "Edit Item";
 		var editSubmit = $("#submit");
 		$(editSubmit).bind("click", validate);
-		return false;
 		editSubmit.key = this.key;
 		
 		
@@ -256,11 +253,8 @@ $(document).ready("DOMContentLoaded", function(){
 	//Set Links & Submit Click Events
 	var displayLink = $("#displayLink");
 	$(displayLink).bind("click", getData);
-	return false;
 	var clearLink = $("#clear");
 	$(clearLink).bind("click", clearLocal);
-	return false;
 	var save = $("#submit");
 	$(save).bind("click", storeData);
-	return false;
 });
